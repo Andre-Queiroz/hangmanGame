@@ -12,6 +12,7 @@ public class Controller {
     View output = new View();
     char letter;
 
+
     public void startGame() {
 
         game.generateHint();
@@ -28,6 +29,7 @@ public class Controller {
 
             if (letter == '0') {
                 game.guessWord();
+                System.out.println("The word was: " + game.returnVisibleWord());
                 break;
             }
 
@@ -35,7 +37,10 @@ public class Controller {
                 output.showLetterExists();
             } else {
                 output.showLetterDoesntExists();
+                game.storeWrongLetters(letter, count);
                 count = count + 1;
+                System.out.println();
+
                 if (count == 1) {
                     output.showFirstError();
                 }

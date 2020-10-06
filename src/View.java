@@ -58,7 +58,9 @@ public class View {
      *  Print the message if user's input belong to the word
      */
     public void showLetterExists(){
-        System.out.println("\nLetter exists in the word");
+        System.out.println("\n-------------------------");
+        System.out.println("Letter exists in the word");
+        System.out.println("-------------------------");
     }
 
 
@@ -66,7 +68,9 @@ public class View {
      *  Print the message if user's input doesn't belong to the word
      */
     public void showLetterDoesntExists(){
-        System.out.println("\nLetter doesn't exists in the word ");
+        System.out.println("\n---------------------------------");
+        System.out.println("Letter doesn't exists in the word");
+        System.out.println("---------------------------------");
     }
 
 

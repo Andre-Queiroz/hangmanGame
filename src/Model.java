@@ -11,7 +11,8 @@ public class Model {
     View output = new View();
     int line; // Stores the selected line
     int column; // Stores the selected column
-    char rightChoice [];
+    char rightChoice[];
+    char wrongLetters[] = new char[6];
 
     /**
      *  String array bi-dimensional (5 lines and 8 columns).
@@ -164,6 +165,16 @@ public class Model {
         return bool;
     }
 
+    /**
+     *  Stores incorrect user's input into wrongLetters[] array
+     */
+    public void storeWrongLetters(char letter , int count){
+        wrongLetters[count] = letter;
+        System.out.print("Wrong letters: ");
+        for (int i = 0; i < (count + 1); i++) {
+            System.out.print(wrongLetters[i] + " ");
+        }
+    }
 
     /**
      *  Returns all words in the array
