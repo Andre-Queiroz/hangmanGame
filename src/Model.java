@@ -177,6 +177,20 @@ public class Model {
     }
 
     /**
+     *  Checks if the incorrect letter has already been entered
+     */
+    public boolean checkWrongLettersAlreadyTyped(char letter){
+        boolean ret = false;
+        for (int i = 0; i < wrongLetters.length; i++){
+            if (wrongLetters[i] == letter){
+                ret = true;
+            }
+        }
+        return ret;
+    }
+
+
+    /**
      *  Returns all words in the array
      */
     public String returnWords(){

@@ -58,7 +58,7 @@ public class View {
      *  Print the message if user's input belong to the word
      */
     public void showLetterExists(){
-        System.out.println("\n-------------------------");
+        System.out.println("\n\n\n-------------------------");
         System.out.println("Letter exists in the word");
         System.out.println("-------------------------");
     }
@@ -68,11 +68,16 @@ public class View {
      *  Print the message if user's input doesn't belong to the word
      */
     public void showLetterDoesntExists(){
-        System.out.println("\n---------------------------------");
+        System.out.println("\n\n\n---------------------------------");
         System.out.println("Letter doesn't exists in the word");
         System.out.println("---------------------------------");
     }
 
+    public void showWrongLettersAlreadyTyped(){
+        System.out.println("\n\n\n----------------------------------");
+        System.out.println("This letter has already been typed");
+        System.out.println("----------------------------------");
+    }
 
     public void showFirstError(){
         System.out.println("   ____________    ");

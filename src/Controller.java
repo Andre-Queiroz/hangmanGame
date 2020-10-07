@@ -36,10 +36,14 @@ public class Controller {
             if (game.checkLetter(letter)) {
                 output.showLetterExists();
             } else {
-                output.showLetterDoesntExists();
-                game.storeWrongLetters(letter, count);
-                count = count + 1;
-                System.out.println();
+                if(game.checkWrongLettersAlreadyTyped(letter)){
+                    output.showWrongLettersAlreadyTyped();
+                } else {
+                    output.showLetterDoesntExists();
+                    game.storeWrongLetters(letter, count);
+                    count = count + 1;
+                    System.out.println();
+                }
 
                 if (count == 1) {
                     output.showFirstError();
